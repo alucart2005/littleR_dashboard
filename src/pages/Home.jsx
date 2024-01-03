@@ -1,9 +1,16 @@
 import styled from "styled-components";
+import { Ganancias } from "../components/Ganancias";
 
 export function Home() {
   return (
     <Container>
-
+      <SubContainer>
+        <SectionA>
+          <ColumnA1>
+            <Ganancias/>
+          </ColumnA1>
+        </SectionA>
+      </SubContainer>
     </Container>
   );
 }
@@ -14,4 +21,46 @@ const Container = styled.div`
   background: red;
   border-top-right-radius: 2rem;
   margin: 1rem 8rem 1rem 4rem;
-`
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
+`;
+const SubContainer = styled.div`
+  margin: 0.5rem 0;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background-color: hsl(120, 100%, 25.098039215686274%);
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    height: 100%;
+  }
+`;
+const SectionA = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
+  width: 100%;
+  gap: 2rem;
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+  }
+`;
+const ColumnA1 = styled.div`
+  display: flex;
+  gap: 3rem;
+  @media screen and (min-width: 320px) and (max-width:1080px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:1rem;
+    width:100%;
+  }
+
+`;
