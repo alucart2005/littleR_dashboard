@@ -1,8 +1,32 @@
 import styled from "styled-components";
 import { themeColor, hoverEffect, cardShadow } from "../utils/utils";
+import img1 from "../assets/a1.jpg";
+import img2 from "../assets/a2.png";
 
 export function Projects() {
-  return <h1>Hi Projects</h1>;
+  return (
+    <YourProjects>
+      <Project>
+        <Avatar>
+          <img src={img1} alt="" />
+        </Avatar>
+        <Detail>
+          <Title>Logo desing for bakery</Title>
+          <SubTitle>1 day remaining</SubTitle>
+        </Detail>
+      </Project>
+      <Project>
+        <Avatar>
+          <img src={img2} alt="" />
+        </Avatar>
+        <Detail>
+          <Title>Personal branding projects</Title>
+          <SubTitle>5 day remaining</SubTitle>
+        </Detail>
+      </Project>
+      <AllProjects> See all projects</AllProjects>
+    </YourProjects>
+  );
 }
 const YourProjects = styled.div`
   height: 70%;
@@ -32,6 +56,7 @@ const Avatar = styled.div`
     height: 4rem;
     width: 4rem;
     border-radius: 4rem;
+    object-fit: cover;
   }
 `;
 const Detail = styled.div`
@@ -46,8 +71,8 @@ const Title = styled.h3`
 const SubTitle = styled.h5`
   font-weight: 300;
 `;
-const AllProjects =styled.h5`
+const AllProjects = styled.h5`
   text-align: end;
   color: ${themeColor};
   cursor: pointer;
-`
+`;
