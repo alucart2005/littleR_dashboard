@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Ganancias } from "../components/Ganancias";
+import { Info } from "../components/Info";
 
 export function Home() {
   return (
@@ -7,18 +8,21 @@ export function Home() {
       <SubContainer>
         <SectionA>
           <ColumnA1>
-            <Ganancias/>
+            <Ganancias />
+            <Info />
           </ColumnA1>
+          <ColumnA2>
+          <TitleText>My Projects</TitleText>
+          </ColumnA2>
         </SectionA>
       </SubContainer>
     </Container>
   );
 }
-
 const Container = styled.div`
   width: 80%;
   border-bottom-right-radius: 2rem;
-  background: red;
+  background:linear-gradient(to bottom right, white 0%, #e6e4ff 70%);
   border-top-right-radius: 2rem;
   margin: 1rem 8rem 1rem 4rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
@@ -35,17 +39,17 @@ const SubContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  background-color: hsl(120, 100%, 25.098039215686274%);
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     height: 100%;
   }
 `;
+
 const SectionA = styled.div`
   display: flex;
   justify-content: space-between;
   height: 40%;
-  width: 100%;
   gap: 2rem;
+  width: 100%;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     flex-direction: column;
     align-items: center;
@@ -55,12 +59,29 @@ const SectionA = styled.div`
 const ColumnA1 = styled.div`
   display: flex;
   gap: 3rem;
-  @media screen and (min-width: 320px) and (max-width:1080px) {
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
     flex-direction: column;
     justify-content: center;
-    align-items:center;
-    gap:1rem;
-    width:100%;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
   }
-
 `;
+const ColumnA2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  height:115%;
+  width:100%;
+
+  background-color: red;
+  
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+const TitleText =styled.h3`
+  height: 20%;
+
+`
