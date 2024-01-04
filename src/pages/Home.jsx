@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Ganancias } from "../components/Ganancias";
 import { Info } from "../components/Info";
 import { Projects } from "../components/Projects";
+import { Facturas } from "../components/Facturas";
 
 export function Home() {
   return (
@@ -17,6 +18,17 @@ export function Home() {
             <Projects />
           </ColumnA2>
         </SectionA>
+        <SectionB>
+          <ColumnB1>
+          <InvoiceContainer>
+            <TitleText>Recent Invoices</TitleText>
+            <Facturas/>
+          </InvoiceContainer>
+          </ColumnB1>
+          <ColumnB2>
+          <TitleText>Recommended Projects</TitleText>
+          </ColumnB2>
+        </SectionB>
       </SubContainer>
     </Container>
   );
@@ -24,7 +36,7 @@ export function Home() {
 const Container = styled.div`
   width: 80%;
   border-bottom-right-radius: 2rem;
-  background: linear-gradient(to bottom right, white 0%, #e6e4ff 70%);
+  background:linear-gradient(to bottom right, white 0%, #e6e4ff 70%);
   border-top-right-radius: 2rem;
   margin: 1rem 8rem 1rem 4rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
@@ -45,6 +57,7 @@ const SubContainer = styled.div`
     height: 100%;
   }
 `;
+
 
 const SectionA = styled.div`
   display: flex;
@@ -82,4 +95,43 @@ const ColumnA2 = styled.div`
 `;
 const TitleText = styled.h3`
   height: 20%;
+`;
+const SectionB = styled.div`
+  display: flex;
+  gap: 2rem;
+  height: 26vh;
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    flex-direction: column;
+    height: max-content;
+    width: 100%;
+  }
+`;
+
+const ColumnB1 = styled.div`
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+const ColumnB2 = styled.div`
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+`;
+const InvoiceContainer = styled.div`
+  height: 60%;
+  @media screen and (min-width: 320px) and (max-width: 1080px) {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 `;
