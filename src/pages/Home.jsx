@@ -3,6 +3,7 @@ import { Ganancias } from "../components/Ganancias";
 import { Info } from "../components/Info";
 import { Projects } from "../components/Projects";
 import { Facturas } from "../components/Facturas";
+import { Recomendados } from "../components/Recomendados";
 
 export function Home() {
   return (
@@ -27,6 +28,7 @@ export function Home() {
           </ColumnB1>
           <ColumnB2>
           <TitleText>Recommended Projects</TitleText>
+          <Recomendados/>
           </ColumnB2>
         </SectionB>
       </SubContainer>
@@ -57,7 +59,6 @@ const SubContainer = styled.div`
     height: 100%;
   }
 `;
-
 
 const SectionA = styled.div`
   display: flex;
@@ -96,6 +97,7 @@ const ColumnA2 = styled.div`
 const TitleText = styled.h3`
   height: 20%;
 `;
+
 const SectionB = styled.div`
   display: flex;
   gap: 2rem;
@@ -106,7 +108,6 @@ const SectionB = styled.div`
     width: 100%;
   }
 `;
-
 const ColumnB1 = styled.div`
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     display: flex;
@@ -129,9 +130,9 @@ const InvoiceContainer = styled.div`
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     height: max-content;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
   }
 `;
